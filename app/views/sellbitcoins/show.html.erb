@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @sellbitcoin.amount %>
+</p>
+
+<p>
+  <strong>Converted:</strong>
+  <%= @sellbitcoin.converted %>
+</p>
+
+<p>
+  <strong>Paymentoption:</strong>
+  <%= @sellbitcoin.paymentoption %>
+</p>
+
+<p>
+  <strong>Ordernumber:</strong>
+  <%= @sellbitcoin.ordernumber %>
+</p>
+
+<p>
+  <strong>Mobilemoneyname:</strong>
+  <%= @sellbitcoin.mobilemoneyname %>
+</p>
+
+<p>
+  <strong>Mobilemoneynumber:</strong>
+  <%= @sellbitcoin.mobilemoneynumber %>
+</p>
+
+<p>
+  <strong>Accept:</strong>
+  <%= @sellbitcoin.accept %>
+</p>
+
+<%= link_to 'Edit', edit_sellbitcoin_path(@sellbitcoin) %> |
+<%= link_to 'Back', sellbitcoins_path %>

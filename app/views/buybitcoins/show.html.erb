@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @buybitcoin.amount %>
+</p>
+
+<p>
+  <strong>Converted:</strong>
+  <%= @buybitcoin.converted %>
+</p>
+
+<p>
+  <strong>Paymentoption:</strong>
+  <%= @buybitcoin.paymentoption %>
+</p>
+
+<p>
+  <strong>Transactionid:</strong>
+  <%= @buybitcoin.transactionid %>
+</p>
+
+<p>
+  <strong>Datetransact:</strong>
+  <%= @buybitcoin.datetransact %>
+</p>
+
+<p>
+  <strong>Timetransact:</strong>
+  <%= @buybitcoin.timetransact %>
+</p>
+
+<p>
+  <strong>Btcaddress:</strong>
+  <%= @buybitcoin.btcaddress %>
+</p>
+
+<p>
+  <strong>Ordernumber:</strong>
+  <%= @buybitcoin.ordernumber %>
+</p>
+
+<%= link_to 'Edit', edit_buybitcoin_path(@buybitcoin) %> |
+<%= link_to 'Back', buybitcoins_path %>

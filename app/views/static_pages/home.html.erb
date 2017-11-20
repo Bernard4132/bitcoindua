@@ -1,0 +1,273 @@
+<% if signed_in? %>
+
+<style type="text/css"></style>
+
+<section class="homesect" style="margin-top: 70px;">
+ <div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1>Hello Mr. Soso and So, whatsup with you</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6" style="border-right: 1px solid #000;">
+      <h2><a href="/buybitcoins/new" class="btn btn-success">Buy Bitcoin</a></h2>
+    </div>
+    <div class="col-lg-6">
+      <h2><a href="/sellbitcoins/new" class="btn btn-success">Sell Bitcoin</a></h2>
+    </div>
+  </div>
+ </div>
+</section>
+
+<% else %>
+
+<style type="text/css">
+
+.aduins{
+ background:linear-gradient(0deg,rgba(97, 161, 67,0.85),rgba(97, 161, 67,1)),url(https://res.cloudinary.com/nikasemo/image/upload/v1511118238/btcf_cjuca1.jpg);
+  background-position:center;
+  min-height: 600px;
+  position: relative;
+  top: -70px;
+  padding-bottom: 20px;
+}
+
+.homepageheadlinetext{
+  font-family: 'Poppins', sans-serif;
+  text-align: center; 
+  color: white; 
+  position: relative; 
+  top: 125px; 
+  font-weight: 900;
+  margin-bottom: 20px;  
+}
+
+.headlinesubtext{
+  font-family: 'Asap Condensed', sans-serif;
+  text-align: center; 
+  color: white; 
+  position: relative;
+  font-size: 16px; 
+  top: 128px;
+}
+
+.aamechange{
+  -webkit-box-shadow: 1px 1px 14px 0px rgba(50, 50, 50, 0.59);
+  -moz-box-shadow: 1px 1px 14px 0px rgba(50, 50, 50, 0.59);
+  box-shadow: 1px 1px 14px 0px rgba(50, 50, 50, 0.59);
+}
+
+.bitcoinexratesect{
+  position: relative;
+  top: -70px;
+  background-color: #61a143;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 30px;
+}
+
+.featuredon{
+  position: relative;
+  top: -70px;
+  background-color: #f6f6f6;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 30px;
+}
+
+.ratehead{
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+}
+
+.rateheadsub{
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+}
+
+.pricebtc{
+  background-color: #f6f6f6;
+  padding: 8px;
+  border-radius: 18px;
+  width: 100%;
+}
+
+hr.worksdivider{
+  height: 1px;
+  background-color: #ffffff;
+  width: 15%;
+}
+
+hr.worksdivider1{
+  height: 1px;
+  background-color: #f48708;
+  width: 15%;
+}
+
+.btnsignup{
+  background-color: #f48708;
+  width: 50%;
+  border: #f48708;
+}
+
+</style>
+
+
+<section class="aduins">
+  <div class="container">
+    <div class="row" style="margin-top: 70px">
+      <div class="col-lg-12">
+        <h2 style="" class="homepageheadlinetext">Ghana's number one Bitcoin Agent!</h2>
+        <p class="headlinesubtext">
+         <span> <i class="fa fa-user-plus" aria-hidden="true"></i> &nbsp;Register</span>&nbsp;&nbsp;&nbsp;
+         <span><i class="fa fa-money" aria-hidden="true"></i> &nbsp;Buy/Sell</span>
+         &nbsp;&nbsp;&nbsp;<span><i class="fa fa-newspaper-o" aria-hidden="true"></i> &nbsp;Latest Bitcoin News</span>
+        </p>
+      </div>
+    </div>
+    <div class="row justify-content-center" style="margin-top: 140px;">
+      <div class="col-md-6 col-md-offset-3">
+
+        <iframe
+          src="https://changelly.com/widget/v1?auth=email&from=BTC&to=ETH&merchant_id=843c8c98f0f7&address=&amount=1&ref_id=843c8c98f0f7&color=00cf70"
+          width="100%"
+          height="500"
+          class="changelly aamechange"
+          scrolling="no"
+          style="overflow-y: hidden; border-radius: 10px; border: 8px solid #f48708;"
+        >
+          Can't load widget
+        </iframe>
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bitcoinexratesect">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4 class="ratehead">BITCOIN RATE</h4>
+      <p class="rateheadsub">Updated Bitcoin rate from the Stock Exchange</p>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+      <p class="pricebtc" style="text-align: right; padding-right: 10px;">1 <span style="font-weight: 300;">Bitcoin</span></p>
+      <p style="text-align: right; font-weight: 300; color: #f6f6f6;">Bitcoins Sold<br><br>
+        <span style="font-weight: 700;">1292</span>
+      </p>
+      </div>
+      <div class="col-sm-6">
+      <p class="pricebtc" style="text-align: left; pading-left: 10px;">$8063.01 <span style="font-weight: 300;">Dollars</span></p>
+      <p style="text-align: left; font-weight: 300; color: #f6f6f6;">Bitcoins Bought<br><br>
+        <span style="font-weight: 700;">1381</span>
+      </p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="featuredon">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4 class="ratehead" style="color: #000000;">FEATURED ON</h4>
+      <br>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+      <p class="pricebtc" style="text-align: center; padding: 10px;"><img src="https://res.cloudinary.com/nikasemo/image/upload/v1511130406/logo-hitbtc_fqckxb.png" height="80px" width="100%"></p>
+      </div>
+      <div class="col-sm-3">
+      <p class="pricebtc" style="text-align: center; padding: 10px"><img src="https://res.cloudinary.com/nikasemo/image/upload/v1511130406/logo-cryptonoticias_eewzfs.png" width="100%"></p>
+      </div>
+      <div class="col-sm-3">
+      <p class="pricebtc" style="text-align: center; padding: 10px"><img src="https://res.cloudinary.com/nikasemo/image/upload/v1511130406/logo-cryptocoins_gjmc5s.png" width="100%"></p>
+      </div>
+      <div class="col-sm-3">
+      <p class="pricebtc" style="text-align: center; padding: 10px"><img src="https://res.cloudinary.com/nikasemo/image/upload/v1511130406/logo-cryptoninjas_qm8wlt.png"  width="100%"></p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="bitcoinexratesect">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4 class="ratehead" style="color: #000000;">VALUE WE GIVE YOU</h4>
+      <hr class="worksdivider">
+      <br>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+      <p class="" style="text-align: center; padding: 10px; color: #fff; font-weight: 300; font-size: 20px; margin-bottom: 50px;">
+       <span>Buy / Sell</span><br>
+       <span style="font-weight: 700;">Buy and sell bitcoin</span><br>
+       <span><i class="fa fa-4x fa-btc" aria-hidden="true"></i></span>
+      </p>
+      </div>
+      <div class="col-lg-4">
+      <p class="" style="text-align: center; padding: 10px; color: #fff; font-weight: 300; font-size: 20px; margin-bottom: 50px;">
+       <span>Exhange Bitcoin</span><br>
+       <span style="font-weight: 700;">Exchange to other Currencies</span><br>
+       <span><i class="fa fa-4x fa-exchange" aria-hidden="true"></i></span>
+      </p>
+      </div>
+      <div class="col-lg-4">
+      <p class="" style="text-align: center; padding: 10px; color: #fff; font-weight: 300; font-size: 20px; margin-bottom: 50px;">
+       <span>News</span><br>
+       <span style="font-weight: 700;">Latest news on Bitcoin</span><br>
+       <span><i class="fa fa-4x fa-newspaper-o" aria-hidden="true"></i></span>
+      </p>
+      </div>
+      <div class="col-lg-4">
+      <p class="" style="text-align: center; padding: 10px; color: #fff; font-weight: 300; font-size: 20px; margin-bottom: 50px;">
+       <span>Secure</span><br>
+       <span style="font-weight: 700;">Secure Transactions</span><br>
+       <span><i class="fa fa-4x fa-shield" aria-hidden="true"></i></span>
+     </p>
+      </div>
+       <div class="col-lg-4">
+      <p class="" style="text-align: center; padding: 10px; color: #fff; font-weight: 300; font-size: 20px; margin-bottom: 50px;">
+       <span>Value for $</span><br>
+       <span style="font-weight: 700;">Value for your Money</span><br>
+       <span><i class="fa fa-4x fa-smile-o" aria-hidden="true"></i></span>
+      </p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="featuredon">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 class="ratehead" style="color: #000;">WANT TO KNOW MORE?</h3>
+      <hr class="worksdivider1">
+      <br>
+      <p class="rateheadsub" style="color: #000;">Bitcoindua helps you buy and sell bitcoins and <br> also helps you exchange bitcoin into other crypto currencies</p>
+      <br>
+      <p style="text-align: center;"><a href="" class="btn btn-primary btnsignup btn-lg">Sign Up Today!</a></p>
+      <br><br>
+      <p class="rateheadsub" style="color: #000;">
+      <span style="font-weight: 700; font-family: 'Poppins', sans-serif;">Bitcoindua.com</span><br>
+      <span>Bitcoindua is a Ghanaian Based company which buys and sells bitcoins. Our platform <br>Also helps clients exchange bitcoins into other cryto currencies. <br>We also keep you informed on the latest bitcoin news and updates.</span></p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<% end %>

@@ -1,0 +1,197 @@
+
+
+<style type="text/css">
+
+ a {
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+
+  .navbackground{
+     background-color: rgba(97, 161, 67, 0.9);
+  }
+
+
+
+.navbar-brand1 {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+
+
+
+.navbar-light .navbar-brand1{
+color: #fff; 
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+}
+
+.navbar-scroll{
+color: #000; 
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+  color: white;
+}
+
+.navbar-light .navbar-scroll:focus, .navbar-light .navbar-scroll:hover {
+  color: #343a40;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #ffffff;
+  font-weight: 300;
+  font-family: 'Asap Condensed', sans-serif;
+  transition: border-color .5s ease-in-out;
+    -webkit-transition: border-color .5s ease-in-out;
+    -moz-transition: border-color .5s ease-in-out;
+  border-bottom: 4px solid transparent;
+}
+
+.navlinkscroll{
+  color: #343a40;
+  
+}
+
+.navbar-light .navbar-nav .nav-link:focus {
+  color: #ffffff;
+  font-weight: 700;
+  border-bottom-color:#ffffff;
+}
+
+ .navbar-light .navbar-nav .nav-link:hover {
+  color: #ffffff;
+  font-weight: 700;
+  border-bottom-color: #ffffff;
+}
+
+.navbar-light .navbar-nav .nav-link.disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
+  color: #ffffff;
+  font-weight: 500;
+  border-bottom: 4px solid #f48708;
+  
+}
+
+.holdformsi{
+  padding: 50px;
+}
+
+.innerctact{
+  background-color: #ddd;
+  border: 1px solid #b3b3b3;
+  border-radius: 5px;
+  min-height: 200px;
+  padding: 5px;
+}
+
+.innerctact:hover{
+-webkit-box-shadow: 0px 0px 35px -5px rgba(0,0,0,0.7);
+-moz-box-shadow: 0px 0px 35px -5px rgba(0,0,0,0.7);
+box-shadow: 0px 0px 35px -5px rgba(0,0,0,0.7);
+}
+
+.foothead{
+  color: white;
+  font-family: 'Asap Condensed', sans-serif; 
+}
+
+.js-reveal {
+  opacity: 1;
+  transition: opacity .7s ease-in, margin-top .7s ease-out;
+}
+
+.js-reveal--hidden {
+  opacity: 0;
+  margin-top: 3em;
+}
+
+@media only screen and (min-width : 100px) and (max-width : 600px) {
+
+  .navbar-light .navbar-brand1{
+font-size: 13px;
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+}
+
+
+.innerctact{
+  background-color: #ddd;
+  border: 1px solid #b3b3b3;
+  border-radius: 5px;
+  min-height: 200px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+
+}
+
+
+</style>
+
+<body style="background-color: #f2f2f2">
+
+<nav class="navbar navbar-light navbar-expand-lg fixed-top navbackground">
+      <div class="container">
+        <a class="navbar-brand1" href="/" style=""><img src="https://res.cloudinary.com/nikasemo/image/upload/v1511123402/coin1_mx1qby.png" width="39px" style="height: 100%; margin-right:5px;">
+          <span style="position:relative; top: 5px;">Bitcoindua</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/aboutus">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/blogs">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/faq">Faq</a>
+            </li>
+            <% if signed_in? %>
+            <li class="nav-item">
+            <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => "nav-link" %>
+            </li>
+            <% end %>
+            <% if !signed_in? %>
+            <li class="nav-item">
+              <a class="nav-link" href="/users/sign_in">Sign In</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/users/sign_up">Sign Up</a>
+            </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </body>
+

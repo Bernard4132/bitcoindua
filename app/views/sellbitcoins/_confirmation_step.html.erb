@@ -1,0 +1,37 @@
+ 
+
+<p>
+  <strong>Amount:</strong>
+  <%= @sellbitcoin.amount %>
+</p>
+
+<p>
+  <strong>Converted:</strong>
+  <%= @sellbitcoin.converted %>
+</p>
+
+<p>
+  <strong>Paymentoption:</strong>
+  <%= @sellbitcoin.paymentoption %>
+</p>
+
+<p>
+  <strong>Ordernumber:</strong>
+  <%= @sellbitcoin.ordernumber %>
+</p>
+
+<p>
+  <strong>Mobilemoneyname:</strong>
+  <%= @sellbitcoin.mobilemoneyname %>
+</p>
+
+<p>
+  <strong>Mobilemoneynumber:</strong>
+  <%= @sellbitcoin.mobilemoneynumber %>
+</p>
+
+
+ <div class="form-group">
+    <%= f.check_box :accept, :required => "true" %>
+    <label>Accept</label>
+  </div>

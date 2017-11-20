@@ -1,0 +1,44 @@
+<p>
+  <strong>Amount:</strong>
+  <%= @buybitcoin.amount %>
+</p>
+
+<p>
+  <strong>Converted:</strong>
+  <%= @buybitcoin.converted %>
+</p>
+
+<p>
+  <strong>Paymentoption:</strong>
+  <%= @buybitcoin.paymentoption %>
+</p>
+
+<p>
+  <strong>Transactionid:</strong>
+  <%= @buybitcoin.transactionid %>
+</p>
+
+<p>
+  <strong>Datetransact:</strong>
+  <%= @buybitcoin.datetransact %>
+</p>
+
+<p>
+  <strong>Timetransact:</strong>
+  <%= @buybitcoin.timetransact %>
+</p>
+
+<p>
+  <strong>Btcaddress:</strong>
+  <%= @buybitcoin.btcaddress %>
+</p>
+
+<p>
+  <strong>Ordernumber:</strong>
+  <%= @buybitcoin.ordernumber %>
+</p>
+
+<div class="form-group">
+    <%= f.check_box :accept, :required => "true" %>
+    <label>Accept</label>
+  </div>

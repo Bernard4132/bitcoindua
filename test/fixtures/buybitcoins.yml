@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 1
+  converted: 9.99
+  paymentoption: MyString
+  transactionid: MyString
+  datetransact: MyString
+  timetransact: MyString
+  btcaddress: MyString
+  ordernumber: MyString
+
+two:
+  amount: 1
+  converted: 9.99
+  paymentoption: MyString
+  transactionid: MyString
+  datetransact: MyString
+  timetransact: MyString
+  btcaddress: MyString
+  ordernumber: MyString

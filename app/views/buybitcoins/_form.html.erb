@@ -1,0 +1,57 @@
+<%= form_for(buybitcoin) do |f| %>
+  <% if buybitcoin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(buybitcoin.errors.count, "error") %> prohibited this buybitcoin from being saved:</h2>
+
+      <ul>
+      <% buybitcoin.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :amount %>
+    <%= f.number_field :amount %>
+  </div>
+
+  <div class="field">
+    <%= f.label :converted %>
+    <%= f.text_field :converted %>
+  </div>
+
+  <div class="field">
+    <%= f.label :paymentoption %>
+    <%= f.text_field :paymentoption %>
+  </div>
+
+  <div class="field">
+    <%= f.label :transactionid %>
+    <%= f.text_field :transactionid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :datetransact %>
+    <%= f.text_field :datetransact %>
+  </div>
+
+  <div class="field">
+    <%= f.label :timetransact %>
+    <%= f.text_field :timetransact %>
+  </div>
+
+  <div class="field">
+    <%= f.label :btcaddress %>
+    <%= f.text_field :btcaddress %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ordernumber %>
+    <%= f.text_field :ordernumber %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

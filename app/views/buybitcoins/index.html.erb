@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Buybitcoins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Amount</th>
+      <th>Converted</th>
+      <th>Paymentoption</th>
+      <th>Transactionid</th>
+      <th>Datetransact</th>
+      <th>Timetransact</th>
+      <th>Btcaddress</th>
+      <th>Ordernumber</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @buybitcoins.each do |buybitcoin| %>
+      <tr>
+        <td><%= buybitcoin.amount %></td>
+        <td><%= buybitcoin.converted %></td>
+        <td><%= buybitcoin.paymentoption %></td>
+        <td><%= buybitcoin.transactionid %></td>
+        <td><%= buybitcoin.datetransact %></td>
+        <td><%= buybitcoin.timetransact %></td>
+        <td><%= buybitcoin.btcaddress %></td>
+        <td><%= buybitcoin.ordernumber %></td>
+        <td><%= link_to 'Show', buybitcoin %></td>
+        <td><%= link_to 'Edit', edit_buybitcoin_path(buybitcoin) %></td>
+        <td><%= link_to 'Destroy', buybitcoin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Buybitcoin', new_buybitcoin_path %>
