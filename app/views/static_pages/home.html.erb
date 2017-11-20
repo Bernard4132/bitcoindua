@@ -2,15 +2,15 @@
 
 <style type="text/css"></style>
 
-<section class="homesect" style="margin-top: 70px;">
+<section class="homesect" style="margin-top: 80px;">
  <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h1>Hello Mr. Soso and So, whatsup with you</h1>
+      <p style="text-align: center; font-weight: 300;">Hello <%= current_user.email %>, you are welcome to your dashboard. Initiate buy requests and sell requests from here.<br> Also, manage your orders from here too.</p>
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-6" style="border-right: 1px solid #000;">
+    <div class="col-lg-6" style="border-right: 1px solid #bfbfbf;">
       <h2><a href="/buybitcoins/new" class="btn btn-success">Buy Bitcoin</a></h2>
     </div>
     <div class="col-lg-6">
@@ -115,6 +115,19 @@ hr.worksdivider1{
   border: #f48708;
 }
 
+.aamechange{
+     overflow-y: hidden; 
+     overflow-x: hidden;
+  }
+
+@media only screen and (min-width : 100px) and (max-width : 600px) {
+
+  .aamechange{
+     overflow-y: hidden; 
+     overflow-x: scroll;
+  }
+}
+
 </style>
 
 
@@ -138,8 +151,7 @@ hr.worksdivider1{
           width="100%"
           height="500"
           class="changelly aamechange"
-          scrolling="yes"
-          style="overflow-y: hidden; overflow-x: scroll; border-radius: 10px; border: 8px solid #f48708;"
+          style="border-radius: 10px; border: 8px solid #f48708;"
         >
           Can't load widget
         </iframe>
