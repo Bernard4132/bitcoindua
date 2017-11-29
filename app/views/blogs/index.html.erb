@@ -1,39 +1,227 @@
-<p id="notice"><%= notice %></p>
+<style type="text/css">
 
-<h1>Blogs</h1>
+.holderimg{
+ background:linear-gradient(0deg,rgba(0,0,0,0),rgba(0,0,0,0)),url(https://res.cloudinary.com/nikasemo/image/upload/v1511961352/btbaby_j5judn.png);
+  background-position:center;
+  min-height: 350px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.1);
+}
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Blogimage</th>
-      <th>Videolink</th>
-      <th>Body</th>
-      <th>User</th>
-      <th>Metadescription</th>
-      <th>Metakeywords</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+.topthingstoknow{
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-top: 7px solid #f48708;
+  position: relative;
+  top: 0px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+}
 
-  <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.blogimage %></td>
-        <td><%= blog.videolink %></td>
-        <td><%= blog.body %></td>
-        <td><%= blog.user_id %></td>
-        <td><%= blog.metadescription %></td>
-        <td><%= blog.metakeywords %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+.containit{
+  margin-left: 40px;
+  margin-right: 40px;
+}
 
-<br>
+.titler{
+  position: relative;
+  top: 100px;
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 30px;
+  color: white;
+  text-shadow: 1px 0px 6px rgba(0, 0, 0, 1);
+  font-family: 'Roboto Slab', serif;
+}
 
-<%= link_to 'New Blog', new_blog_path %>
+.subtler{
+  position: relative;
+  top: 100px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 30px;
+  color: white;
+  text-shadow: 1px 0px 6px rgba(0, 0, 0, 1);
+}
+
+.ctaone{
+  position: relative;
+  top: 120px;
+  margin-left: 30px;
+  float: left;
+}
+
+.adonis{
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px;
+  background-color: #f48708;
+  border: #ff8900;
+}
+
+.sidebarhome{
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.stepss{
+  margin-top: 15px;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 15px;
+}
+
+.servss{
+  color: #595959;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 15px;
+}
+
+.icon1desc{
+  height: 80px;
+  width: 80px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+}
+
+.blogimgpart{
+  width: 100%;
+}
+
+.blogpart{
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  margin-top: 15px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+}
+
+.homeer{
+  padding-bottom: 35px;
+}
+
+.alertthismsg{
+  padding: 50px;
+  background-color: #f2f2f2;
+}
+
+.alertmsgmsg{
+  font-weight: 500;
+  font-size: 29px;
+  font-family: 'Lora', serif;
+  line-height: 40px;
+}
+
+</style>
+
+<br><br><br>
+<section class="homeer">
+<div class="containit">
+<div class="row">
+  <div class="col-lg-9">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="holderimg">
+          <p class="titler">Ghana's foremost bitcoin Blog!<br>All about Bitcoin, Crypto currency and Blockchain.</p>
+          <p class="subtler">All the expert articles, advice and services on bitcoin and investing.</p>
+          <p class="ctaone"><a href="/users/sign_up" class="btn btn-primary adonis">Join Our Bitcoin Community!</a></p>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="row" style="margin-top: 10px;">
+          
+          <div class="col-lg-12">
+            <h3 class="servss">Latest Articles</h3>
+            <div class="blogpart">
+             <div class="row">
+              <div class="col-sm-4">
+                <div class="blogimgpart">
+                  <img src="https://res.cloudinary.com/nikasemo/image/upload/v1511961355/btc1dred_ln9i04.png" class="img-fluid">
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <h2 style="font-weight: 700; font-size: 17px;">Bitcoins to become a globally accepted medium of exchange by 2025.</h2>
+                <span style="color: #d9d9d9; font-weight: 500;">Authored By: Bernard Lomo</span>
+                <p>Find out how and why we think Bitcoin will be a globaly acepted currency by 2025.</p>
+              </div>
+            </div>
+
+            <div class="row" style="margin-top: 15px; border-top: 1px solid #e6e6e6; padding-top: 15px;">
+              <div class="col-sm-4">
+                <div class="blogimgpart">
+                  <img src="https://res.cloudinary.com/nikasemo/image/upload/v1511961355/btc1dred_ln9i04.png" class="img-fluid">
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <h2 style="font-weight: 700; font-size: 17px;">Bitcoins to become a globally accepted medium of exchange by 2025.</h2>
+                <span style="color: #d9d9d9; font-weight: 500;">Authored By: Bernard Lomo</span>
+                <p>Find out how and why we think Bitcoin will be a globaly acepted currency by 2025.</p>
+              </div>
+            </div>
+
+            <div class="row" style="margin-top: 15px; border-top: 1px solid #e6e6e6; padding-top: 15px;">
+              <div class="col-sm-4">
+                <div class="blogimgpart">
+                  <img src="https://res.cloudinary.com/nikasemo/image/upload/v1511961355/btc1dred_ln9i04.png" class="img-fluid">
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <h2 style="font-weight: 700; font-size: 17px;">Bitcoins to become a globally accepted medium of exchange by 2025.</h2>
+                <span style="color: #d9d9d9; font-weight: 500;">Authored By: Bernard Lomo</span>
+                <p>Find out how and why we think Bitcoin will be a globaly acepted currency by 2025.</p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="topthingstoknow">
+      <h2 style="font-weight: 500;" class="sidebarhome">Important things to know! First!</h2>
+      <div class="row">
+      <div class="col-sm-12">
+        <div class="stepss">
+        <p style="font-weight: 700;">The origins of Bitcoins.</p>
+        <span style="color: #cccccc; font-weight: 500; font-size: 13px;">learn about how bitcoin started and where it is heading towards.</span>
+      </div>
+      <div class="stepss">
+        <p style="font-weight: 700;">Conceptions of preconceptions of Bitcoin.</p>
+        <span style="color: #d9d9d9; font-weight: 500; font-size: 13px;">Learn about what Bit coin is and what it is not.</span>
+      </div>
+      <div class="stepss">
+        <p style="font-weight: 700;">Creating your first bitcoin wallet.</p>
+        <span style="color: #d9d9d9; font-weight: 500; font-size: 13px;">Get to know about how to create your first bitcoin wallet.</span>
+      </div>
+      <div class="stepss">
+        <p style="font-weight: 700;">How to buy your first bitcoins</p>
+        <span style="color: #d9d9d9; font-weight: 500; font-size: 13px;">Buying your first bitcoin, Best rates and other suggestions.</span>
+      </div>
+      <div class="stepss">
+        <p style="font-weight: 700;">Buying other Alternate coins.</p>
+        <span style="color: #d9d9d9; font-weight: 500; font-size: 13px;">what are alt coins coins and why you shound invest in them.</span>
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="alertthismsg">
+
+<h1 style="text-align: center;" class="alertmsgmsg">Bitcoin enthusiasts in Ghana, both young and old<br> depend on <span style="color: #f48708; font-weight: 700;">Cryptofuor.com</span> for great advice,<br> relevant articles and other services they need to<br> invest in bitcoin and grow their investments.<br><span style="font-weight: 700;">Join Ghana's Foremost Bitcoin Community.</span></h1>
+
+</section>

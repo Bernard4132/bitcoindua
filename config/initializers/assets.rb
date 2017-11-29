@@ -5,6 +5,8 @@ Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w( bootstrap.css )
 Rails.application.config.assets.precompile += %w( bootstrap.js )
+Rails.application.config.assets.precompile += %w( style.css )
+Rails.application.config.assets.precompile += %w( main.js )
 Rails.application.config.assets.precompile += %w( full-slider.css )
 Rails.application.config.assets.precompile += %w( popper.js )
 Rails.application.config.assets.precompile += %w( scroll-reveal.js )

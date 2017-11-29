@@ -1,4 +1,5 @@
-<%= form_for @buybitcoin , :html => {:oninput => "x.value=parseInt(buybitcoin_amount.value)*parseInt(4.2)"} do |f| %>
+<br><br><br><br>
+<%= form_for @buybitcoin do |f| %>
   <% if @buybitcoin.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@buybitcoin.errors.count, "error") %> prohibited this buybitcoin from being saved:</h2>

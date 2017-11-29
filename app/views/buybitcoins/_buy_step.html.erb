@@ -1,9 +1,51 @@
-<div class="field">
-    <%= f.label :amount %>
-    <%= f.number_field :amount %>
-  </div>
 
- <p> Dolllar equiv: 
-<output name="x" for="a b"></output>
-</p>
+
+  
+<script type="text/javascript">
+
+$(document).ready(function () {
+
+    //Calculate both inputs value on the fly
+    $('.calculate').keyup(function () {
+        var Tot = parseFloat($('#buybitcoin_amount').val()) * 4.8;
+        $('#buybitcoin_converted').val(Tot);
+    });
+
+    //Clear both inputs first time when user focus on each inputs and clear value 00
+    $('.calculate').focus(function (event) {
+        $(this).val("").unbind(event);
+    });
+
+    //Remove this it's just for example purpose
+    $('.calculate').keypress(function (e) {
+        if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+            $("#errmsg").html("Digits Only").show().fadeOut("slow");
+            return false;
+        }
+    });
+});
+
+</script>
+
+
+
+ 
+
+<div class="col-xs-4 control-group form-group">
+    <div class="controls">
+        <label>Units:</label>
+        <input type="text" class="form-control calculate" name="buybitcoin[amount]" id="buybitcoin_amount"  required value="00">
+        <p class="help-block"></p>
+    </div>
+</div>
+<div class="col-xs-4 control-group form-group">
+    <div class="controls">
+        <label>Total:</label>
+        <input type="text" class="form-control" name="buybitcoin[converted]" id="buybitcoin_converted" readonly>
+        <p class="help-block"></p>
+    </div>
+</div>
+<div class="col-xs-12 control-group form-group" id="errmsg"></div>
+
+
 
