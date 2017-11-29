@@ -1,19 +1,21 @@
-<p id="notice"><%= notice %></p>
+<style type="text/css">
 
-<p>
-  <strong>Name:</strong>
-  <%= @tag.name %>
-</p>
+.aduins{
+ background:linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.1)),url(<%= @tag.tagimage %>);
+  background-position:center;
+  min-height: 200px;
+  margin-top: 50px;
+}
 
-<p>
-  <strong>Description:</strong>
-  <%= @tag.description %>
-</p>
+</style>
 
-<p>
-  <strong>Tagimage:</strong>
-  <%= @tag.tagimage %>
-</p>
 
-<%= link_to 'Edit', edit_tag_path(@tag) %> |
-<%= link_to 'Back', tags_path %>
+<section class="aduins">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 style="text-align: center; color: white; position: relative; top: 65px; font-weight: 900;  text-shadow: 1px 0px 6px rgba(0, 0, 0, 1);"><%= @tag.name %></h1>
+      </div>
+    </div>
+  </div>
+</section>
