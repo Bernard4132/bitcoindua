@@ -1,4 +1,12 @@
-
+ <title>Crytofuor.com | <%= @blog.title %></title>
+<meta name="description" content="<%= @blog.metadescription %>">
+      <meta name="keywords" content="<%= @blog.metakeywords %>">
+      <meta name="author" content="Crytofuor.com">
+      <meta property="og:title" content="<%= @blog.title %>">
+      <meta property="og:description" content="<%= @blog.metadescription %>">
+      <meta property="og:url" content="<%= blog_url(@blog) %>" />
+     <meta property="og:image" content="<%= @blog.blogimage %>" />
+     
 
 <style type="text/css">
 .aduins{
@@ -160,17 +168,17 @@ font-family: 'Poppins', sans-serif;
        <div id="share-buttons" style="">
      <span style="color: white; text-transform: uppercase; font-size: 15px; font-weight: 400; margin-right: 20px;">Share this </span>
     <!-- Facebook -->
-    <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+    <a href="http://www.facebook.com/sharer.php?u=<%= blog_url(@blog) %>" target="_blank">
         <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
     </a>
     
     <!-- Google+ -->
-    <a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank">
+    <a href="https://plus.google.com/share?url=<%= blog_url(@blog) %>" target="_blank">
         <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
     </a>
     
     <!-- LinkedIn -->
-    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<%= blog_url(@blog) %>" target="_blank">
         <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
     </a>
     
@@ -180,7 +188,7 @@ font-family: 'Poppins', sans-serif;
     </a>
      
     <!-- Twitter -->
-    <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+    <a href="https://twitter.com/share?url=<%= blog_url(@blog) %>&amp;text=<%= @blog.title %>&amp;hashtags=Cryptofuor" target="_blank">
         <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
     </a>
 
@@ -196,8 +204,8 @@ font-family: 'Poppins', sans-serif;
       <div class="col-lg-9 col-md-12">
          <div class="bodyhold">
         <img src="<%= @blog.blogimage %>" height="200px" width="320px" style="position: relative; float: left; margin-right: 20px; margin-bottom: 20px;">
-        <p style="font-weight: 700;"><%= @blog.metakeywords %></p>
-        <%= @blog.body %>
+        <p style="font-weight: 700;"><%= @blog.metadescription %></p>
+        <%=h raw @blog.body %>
         </div>
       </div>
       <div class="col-lg-3 col-md-12">
