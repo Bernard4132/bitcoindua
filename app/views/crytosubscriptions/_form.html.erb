@@ -1,0 +1,52 @@
+<style type="text/css">
+
+.btnner{
+  position: relative;
+  float: right;
+}
+
+.holdforminit{
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  -webkit-box-shadow: -1px -1px 5px 6px rgba(0,0,0,0.1);
+-moz-box-shadow: -1px -1px 5px 6px rgba(0,0,0,0.1);
+box-shadow: -1px -1px 5px 6px rgba(0,0,0,0.1);
+}
+
+</style>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-lg-6 col-lg-offset-3">
+      <div class="holdforminit">
+         <h1 class="subscribehead">Join our membership for exclusives</h1>
+         <p style="font-weight: 300; text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo amet, consectetur adipiscing elit, sed do eiusmod tempo</p><br>
+<%= form_for(crytosubscription) do |f| %>
+  <% if crytosubscription.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(crytosubscription.errors.count, "error") %> prohibited this crytosubscription from being saved:</h2>
+
+      <ul>
+      <% crytosubscription.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.text_field :name, :class => "form-control", :placeholder => "Your Name" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :email, :class => "form-control", :placeholder => "Your Email" %>
+  </div>
+
+  <div class="actions">
+   <p style="text-align: center;"> <%= f.submit "Join Today", :class => "btn btn-lg btn-success" %></p>
+  </div>
+<% end %>
+
+</div>
+</div>
+</div>

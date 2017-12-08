@@ -1,0 +1,2 @@
+class Crytosubscription < ApplicationRecord
+end

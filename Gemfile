@@ -28,6 +28,10 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 gem 'trix'
 
+gem "refile", require: "refile/rails"
+
+
+
 gem 'fog'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

@@ -4,4 +4,5 @@ class Blog < ApplicationRecord
     friendly_id :title, use: :slugged
 	has_many :taggings, :dependent => :destroy, :autosave => true
     has_many :tags, through: :taggings
+    has_many :photos
 end

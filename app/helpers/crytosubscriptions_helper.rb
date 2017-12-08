@@ -1,0 +1,2 @@
+module CrytosubscriptionsHelper
+end
