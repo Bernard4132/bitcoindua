@@ -258,8 +258,13 @@ a:hover {
     <ul id="cd-navigation">
       <li><a href="#0">Help</a></li>
       <li><a href="#0">FAQ's</a></li>
+      <% if signed_in? %>
+      <li><%= link_to '<span><i class="fa fa-user-circle" aria-hidden="true"></i> My Profile</span>'.html_safe, current_user %></li>
+      <li><%= link_to '<span><i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out</span>'.html_safe, destroy_user_session_path, :method => :delete %></li>
+      <% else %>
       <li><a href="/users/sign_in"><i class="fa fa-sign-in" aria-hidden="true"></i> Member Login</a></li>
       <li><a href="/crytosubscriptions/new"><span style="color: #f48708; font-weight: 900;">Join Our Membership</span></a></li>
+      <% end %>
     </ul>
   </nav> <!-- .cd-primary-nav -->
 

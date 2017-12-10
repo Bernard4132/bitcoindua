@@ -28,9 +28,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 gem 'trix'
 
-gem "refile", require: "refile/rails"
-
-
+gem 'refile', github: 'refile/refile', require: 'refile/rails'
+gem 'refile-mini_magick', github: 'refile/refile-mini_magick'
+gem 'sinatra', github: 'sinatra/sinatra', branch: 'master'
 
 gem 'fog'
 # gem 'redis', '~> 3.0'
@@ -43,10 +43,7 @@ gem 'friendly_id', '~> 5.1.0'
 
 gem 'carrierwave', '~> 1.0'
 
-group :production do
-gem 'pg'
-gem 'rails_12factor'
-end
+gem 'devise_invitable', github: 'scambra/devise_invitable'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

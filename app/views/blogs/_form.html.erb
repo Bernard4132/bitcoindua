@@ -29,6 +29,11 @@ trix-editor {
     <%= f.text_field :title, :class => "form-control" %>
   </div>
 
+  <div class="form-group">
+    <label>Summary</label>
+    <%= f.text_field :bleb, :class => "form-control" %>
+  </div>
+
   <br>
   <label>Blog Post Body</label>
   <%= f.trix_editor :body, :rows => "7", :class => "form-control" %>

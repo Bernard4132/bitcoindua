@@ -15,3 +15,8 @@
 //= require turbolinks
 //= require trix
 //= require_tree .
+
+$(document).on("trixUploadEnd", function() {
+    editor = $("trix-editor").get(0).editor;
+    editor.insertLineBreak();
+});

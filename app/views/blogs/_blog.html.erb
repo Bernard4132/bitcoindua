@@ -1,0 +1,28 @@
+
+
+
+<style type="text/css">
+  .blogimgpart{
+  width: 100%;
+}
+.colorser{
+  background-color: #f48708;
+  color: white;
+  border: 2px solid #d67402;
+}
+</style>
+
+
+<div class="row" style="margin-top: 15px; border-top: 1px solid #e6e6e6; padding-top: 15px;">
+              <div class="col-sm-4">
+                <div class="blogimgpart">
+                  <img src="<%= blog.blogimage %>" class="margdown img-fluid">
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <h2 style="font-weight: 700; font-size: 17px;"><%= blog.title %></h2>
+                <span style="color: #d9d9d9; font-weight: 500;">Authored By: Bernard Lomo</span>
+                <p><%= blog.bleb %></p>
+                <p><%= link_to "Read Article", blog, :class => "btn btn-primary btn-sm colorser" %></p>
+              </div>
+            </div>

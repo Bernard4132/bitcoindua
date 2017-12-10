@@ -226,44 +226,9 @@
           <div class="col-lg-12">
             <h3 class="servss">Latest Articles</h3>
             <div class="blogpart">
-             <div class="row">
-              <div class="col-sm-4">
-                <div class="blogimgpart">
-                  <img src="https://res.cloudinary.com/nikasemo/image/upload/v1511961355/btc1dred_ln9i04.png" class="margdown img-fluid">
-                </div>
-              </div>
-              <div class="col-sm-8">
-                <h2 style="font-weight: 700; font-size: 17px;">Bitcoins to become a globally accepted medium of exchange by 2025.</h2>
-                <span style="color: #d9d9d9; font-weight: 500;">Authored By: Bernard Lomo</span>
-                <p>Find out how and why we think Bitcoin will be a globaly acepted currency by 2025.</p>
-              </div>
-            </div>
+             
 
-            <div class="row" style="margin-top: 15px; border-top: 1px solid #e6e6e6; padding-top: 15px;">
-              <div class="col-sm-4">
-                <div class="blogimgpart">
-                  <img src="https://res.cloudinary.com/nikasemo/image/upload/v1511961355/btc1dred_ln9i04.png" class="margdown img-fluid">
-                </div>
-              </div>
-              <div class="col-sm-8">
-                <h2 style="font-weight: 700; font-size: 17px;">Bitcoins to become a globally accepted medium of exchange by 2025.</h2>
-                <span style="color: #d9d9d9; font-weight: 500;">Authored By: Bernard Lomo</span>
-                <p>Find out how and why we think Bitcoin will be a globaly acepted currency by 2025.</p>
-              </div>
-            </div>
-
-            <div class="row" style="margin-top: 15px; border-top: 1px solid #e6e6e6; padding-top: 15px;">
-              <div class="col-sm-4">
-                <div class="blogimgpart">
-                  <img src="https://res.cloudinary.com/nikasemo/image/upload/v1511961355/btc1dred_ln9i04.png" class="margdown img-fluid">
-                </div>
-              </div>
-              <div class="col-sm-8">
-                <h2 style="font-weight: 700; font-size: 17px;">Bitcoins to become a globally accepted medium of exchange by 2025.</h2>
-                <span style="color: #d9d9d9; font-weight: 500;">Authored By: Bernard Lomo</span>
-                <p>Find out how and why we think Bitcoin will be a globaly acepted currency by 2025.</p>
-              </div>
-            </div>
+           <%= render @blogs %>
 
 
           </div>
@@ -277,26 +242,14 @@
       <h2 style="font-weight: 500;" class="sidebarhome">Important things to know! First!</h2>
       <div class="row">
       <div class="col-sm-12">
-        <div class="stepss">
-        <p style="font-weight: 700;">The origins of Bitcoins.</p>
-        <span style="color: #cccccc; font-weight: 500; font-size: 13px;">learn about how bitcoin started and where it is heading towards.</span>
+        <% Tag.find(1).blogs.each do |blog| %>
+          <div class="stepss">
+        <p style="font-weight: 700;"><%= blog.title %></p>
+        <span style="color: #cccccc; font-weight: 500; font-size: 13px;"><%= blog.metadescription %></span>
+        <br>
+        <%= link_to "Read Article", blog, :class => "" %>
       </div>
-      <div class="stepss">
-        <p style="font-weight: 700;">Conceptions and preconceptions of Bitcoin.</p>
-        <span style="color: #d9d9d9; font-weight: 500; font-size: 13px;">Learn about what Bitcoin is and what it is not.</span>
-      </div>
-      <div class="stepss">
-        <p style="font-weight: 700;">Creating your first bitcoin wallet.</p>
-        <span style="color: #d9d9d9; font-weight: 500; font-size: 13px;">Get to know how to create your first bitcoin wallet.</span>
-      </div>
-      <div class="stepss">
-        <p style="font-weight: 700;">How to buy your first bitcoins</p>
-        <span style="color: #d9d9d9; font-weight: 500; font-size: 13px;">Buying your first bitcoin, Best rates and other suggestions.</span>
-      </div>
-      <div class="stepss">
-        <p style="font-weight: 700;">Buying other Alt Coins.</p>
-        <span style="color: #d9d9d9; font-weight: 500; font-size: 13px;">what are alt coins coins and why you shound invest in them.</span>
-      </div>
+        <% end %>
       </div>
     </div>
     </div>

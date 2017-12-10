@@ -1,0 +1,35 @@
+<br><br><br>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @subscription.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @subscription.description %>
+</p>
+
+<p>
+  <strong>Subsimage:</strong>
+  <%= @subscription.subsimage %>
+</p>
+
+ <h4>Subscribers</h4>
+  <% @subscription.users.each do |user| %>
+    <div><%= user.email %></div>
+  <% end %>
+
+<%= link_to 'Edit', edit_subscription_path(@subscription) %> |
+<%= link_to 'Back', subscriptions_path %>
+
+
+<h4>Invite User</h4>
+<%= form_for [@subscription, Membership.new] do |f| %>
+  <div>
+    <%= f.text_field :email, required: true %>
+  </div>
+  <%= f.submit "Invite" %>
+<%  end %>
