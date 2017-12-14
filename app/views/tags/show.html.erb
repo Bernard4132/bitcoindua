@@ -17,6 +17,22 @@
   box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
 }
 
+.blogsection{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.servss{
+  color: #595959;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
 @media only screen and (min-width : 100px) and (max-width : 600px) {
 
 .aduins{
@@ -42,7 +58,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-7 col-md-12">
-      <h5>All blog Posts</h5>
+      <h5 class="servss">All <%= @tag.name %> Posts</h5>
       <div class="blogpart">
        <%= render @tagblogs %>
       </div>
