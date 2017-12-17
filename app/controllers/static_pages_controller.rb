@@ -19,11 +19,13 @@ def faq
 end
 
 def dashboard
+	if signed_in?
 	@allusers = User.all
 	@allblogs = Blog.all
 	@alltags = Tag.all 
 	@allsubscriptions = Subscription.all
 	render layout: "blog"
+    end
 end
 
 end
