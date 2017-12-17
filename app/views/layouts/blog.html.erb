@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -253,15 +255,9 @@ a:hover {
     </a> <!-- .nav-trigger -->
 
     <ul id="cd-navigation">
-      <li><a href="#0">Help</a></li>
-      <li><a href="#0">FAQ's</a></li>
-      <% if signed_in? %>
-      <li><%= link_to '<span><i class="fa fa-user-circle" aria-hidden="true"></i> My Profile</span>'.html_safe, current_user %></li>
-      <li><%= link_to '<span><i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out</span>'.html_safe, destroy_user_session_path, :method => :delete %></li>
-      <% else %>
-      <li><a href="/users/sign_in"><i class="fa fa-sign-in" aria-hidden="true"></i> Member Login</a></li>
-      <li><a href="/crytosubscriptions/new"><span style="color: #f48708; font-weight: 900;">Join Our Membership</span></a></li>
-      <% end %>
+      <li><a href="#0"><i class="fa fa-question-circle" aria-hidden="true"></i> Help</a></li>
+      <li><a href="#0"><i class="fa fa-info-circle" aria-hidden="true"></i> About Us</a></li>
+      <li><a href="/contacts/new"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact Us</a></li>
     </ul>
   </nav> <!-- .cd-primary-nav -->
 
@@ -270,8 +266,7 @@ a:hover {
       <li><a href="/tags/2">Bitcoin Guide</a></li>
       <li><a href="/tags/3">Alt Coins</a></li>
       <li><a href="/tags/4">ICO's</a></li>
-      <li><a href="/tags/5">Cryptocurrency Wallets</a></li>
-      <li><a href="/tags/6">Bitcoin Mining</a></li>
+      <li><a href="/tags/5">News</a></li>
       <li><a href="#0" class="active">Get Expert Advice</a></li>
     </ul>
   </nav> <!-- .cd-secondary-nav -->

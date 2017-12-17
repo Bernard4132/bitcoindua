@@ -2,10 +2,10 @@
 require "refile/s3"
 
 aws = {
-  :access_key_id => ENV['S3_KEY'],
-  :secret_access_key => ENV['S3_SECRET'],
+ :access_key_id => ENV['S3_KEY'],
+ :secret_access_key => ENV['S3_SECRET'],
   :region => ENV["S3_BUCKET_REGION"],
   :bucket => ENV['S3_BUCKET_NAME'],
-}
-Refile.cache = Refile::S3.new(prefix: "cache", **aws)
-Refile.store = Refile::S3.new(prefix: "store", **aws)
+ }
+ Refile.cache = Refile::S3.new(prefix: "cache", **aws)
+ Refile.store = Refile::S3.new(prefix: "store", **aws)

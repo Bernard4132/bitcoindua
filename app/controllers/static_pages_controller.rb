@@ -6,6 +6,15 @@ end
 def aboutus	
 end
 
+def terms
+	render layout: "blog"
+end
+
+def advertise
+	@contact = Contact.new
+	render layout: "blog"
+end
+
 def faq
 end
 

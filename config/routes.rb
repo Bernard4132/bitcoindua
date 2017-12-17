@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contacts
   resources :subscriptions do
     resources :memberships, path: :users, module: :subscriptions
   end
@@ -16,5 +17,7 @@ Rails.application.routes.draw do
   match 'aboutus', to: 'static_pages#aboutus', via: 'get'
   match 'home', to: 'static_pages#home', via: 'get'
   match 'faq', to: 'static_pages#faq', via: 'get'
+  match 'terms', to: 'static_pages#terms', via: 'get'
+  match 'advertise', to: 'static_pages#advertise', via: 'get'
   match 'dashboard', to: 'static_pages#dashboard', via: 'get'
 end
