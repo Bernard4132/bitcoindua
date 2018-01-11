@@ -12,6 +12,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1.json
   def show
      @blog = Blog.friendly.find(params[:id])
+     @newsletter = Newsletter.new
   end
 
   # GET /blogs/new

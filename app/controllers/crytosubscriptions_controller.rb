@@ -30,7 +30,11 @@ class CrytosubscriptionsController < ApplicationController
 
     respond_to do |format|
       if @crytosubscription.save
-        format.html { redirect_to "/", notice: 'Crytosubscription was successfully created.' }
+        RespondMailer.delay(run_at: 1.day.from_now).crypt_message(@crytosubscription)
+        RespondMailer.delay(run_at: 2.days.from_now).crypt_message2(@crytosubscription)
+        RespondMailer.delay(run_at: 3.days.from_now).crypt_message3(@crytosubscription)
+        RespondMailer.delay(run_at: 5.days.from_now).crypt_message4(@crytosubscription)
+        format.html { redirect_to "/", notice: 'Thanks for seeking for expert Advice. You will hear from us soon.' }
         format.json { render :show, status: :created, location: @crytosubscription }
       else
         format.html { render :new }
@@ -44,7 +48,7 @@ class CrytosubscriptionsController < ApplicationController
   def update
     respond_to do |format|
       if @crytosubscription.update(crytosubscription_params)
-        format.html { redirect_to @crytosubscription, notice: 'Crytosubscription was successfully updated.' }
+        format.html { redirect_to @crytosubscription, notice: 'Thanks for seeking for expert Advice. You will hear from us.' }
         format.json { render :show, status: :ok, location: @crytosubscription }
       else
         format.html { render :edit }

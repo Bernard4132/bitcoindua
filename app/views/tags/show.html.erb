@@ -43,10 +43,80 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.sidebarwebsite{
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-top: 7px solid #f48708;
+  position: relative;
+  top: -25px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+}
+
+.sidebarnewsletter{
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-top: 7px solid #f48708;
+  border-bottom: 7px solid #f48708;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+}
+
+.webcall{
+  font-weight: 700;
+  -webkit-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.21);
+-moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.21);
+box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.21);
+}
+
+.newscall{
+   font-weight: 700;
+  -webkit-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.21);
+-moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.21);
+box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.21);
+}
+
+.adonis{
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px;
+  background-color: #f48708;
+  border: #ff8900;
+}
+
+
 @media only screen and (min-width : 100px) and (max-width : 600px) {
 
 .aduins{
   margin-top: 0px;
+}
+
+.sidebarwebsite{
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-top: 7px solid #f48708;
+  position: relative;
+  top: 0px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+}
+
+.sidebarnewsletter{
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-top: 7px solid #f48708;
+  border-bottom: 7px solid #f48708;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
 }
 
 }
@@ -73,6 +143,60 @@
        <%= render @tagblogs %>
       </div>
     </div>
+    <div class="col-lg-3 col-md-12">
+
+     <% if notice %>
+<div class="alert alert-success alert-dismissible" role="alert" style="margin-bottom: 10px;">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <p class="notice"><%= notice %></p>
+</div>
+<% end %>
+        <div class="sidebarwebsite" style="">
+          <p style="text-align: center"><img src="https://res.cloudinary.com/nikasemo/image/upload/v1510353900/why_qdrevl.png" class="img-fluid"></p>
+          <p style="font-weight: 300; font-size: 18px;">Thinking of Investing in Cryptocurrencies?
+          <br>
+          </p>
+          <p style="text-align: center;"><a href="/crytosubscriptions/new" class="btn btn-primary webcall adonis"><strong>Consult an Expert!</strong></a></p>
+        </div>
+
+        <div class="sidebarnewsletter" style="margin-top: 5px; margin-bottom: 12px;">
+          <h4>Get Updated!</h4>
+          <p style="font-weight: 300; font-size: 15px;">
+           Get notified about exciting articles, trends and offers in the Internet of Money!
+          </p>
+         
+          <%= form_for(@newsletter) do |f| %>
+  <% if @newsletter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@newsletter.errors.count, "error") %> prohibited this newsletter from being saved:</h2>
+
+      <ul>
+      <% @newsletter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+    <%= f.text_field :name, :class => "form-control", :placeholder => "First Name" %>
+    <br>
+    <%= f.text_field :email, :class => "form-control", :placeholder => "Your Email"  %>
+    <br>
+   <p style="text-align: center;"><%= f.submit "Sign Up for Newsletter!", :class => "btn btn-primary newscall adonis" %></p>
+ 
+<% end %>
+
+        </div>
+
+    </div>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+

@@ -133,6 +133,11 @@
   line-height: 40px;
 }
 
+.expertadvicesection{
+  background-color: white;
+  padding: 50px;
+}
+
 @media only screen and (min-width : 100px) and (max-width : 600px) {
 
 .homeer{
@@ -245,6 +250,12 @@
     </div>
   </div>
   <div class="col-lg-3 margtop">
+     <% if notice %>
+<div class="alert alert-success alert-dismissible" role="alert" style="margin-bottom: 10px;">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <p class="notice"><%= notice %></p>
+</div>
+<% end %>
     <div class="topthingstoknow">
       <h2 style="font-weight: 500;" class="sidebarhome">Important things to know! First!</h2>
       <div class="row">
@@ -267,6 +278,23 @@
 
 <section class="alertthismsg">
 
-<h1 style="text-align: center;" class="alertmsgmsg">Bitcoin enthusiasts in Ghana, both young and old<br> depend on <span style="color: #f48708; font-weight: 700;">Cryptofuor.com</span> for great advice,<br> relevant articles and other services they need to<br> invest in bitcoin and grow their investments.<br><span style="font-weight: 700;">Join Ghana's Foremost Bitcoin Community.</span></h1>
+<h1 style="text-align: center;" class="alertmsgmsg">Bitcoin enthusiasts in Ghana, both young and old<br> depend on <span style="color: #f48708; font-weight: 700;">Cryptofuor.com</span> for great advice,<br> relevant articles and other services they need to<br> invest in cryptocurrencies and grow their investments.<br><span style="font-weight: 700;">Join Ghana's Foremost Cryptocurrency Community.</span></h1>
+
+</section>
+
+<section class="expertadvicesection">
+  
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-lg-6">
+      <h1 class="exphead">Getting Expert Advice</h1>
+      <p style="line-height: 30px;">Meet other Experts in crytocurrency who will give you the latest information and development in the space. Information that can help you 10X your investments in Bitcoin and other altcoins. Subscribe to get expert advice Today!</p>
+      <p><a href="/crytosubscriptions/new" class="btn btn-primary adonis famcolor">Get Expert Advice</a></p>
+    </div>
+    <div class="col-sm-12 col-lg-6">
+      <img src="https://res.cloudinary.com/nikasemo/image/upload/v1514741594/businessman_dymrah.jpg" class="img-fluid">
+    </div>
+  </div>
+  </div>
 
 </section>

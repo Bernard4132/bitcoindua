@@ -13,6 +13,7 @@ class TagsController < ApplicationController
   def show
     @tag = Tag.find(params[:id])
     @tagblogs = @tag.blogs
+    @newsletter = Newsletter.new
   end
 
   # GET /tags/new

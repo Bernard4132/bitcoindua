@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :newsletters
   resources :contacts
   resources :subscriptions do
     resources :memberships, path: :users, module: :subscriptions

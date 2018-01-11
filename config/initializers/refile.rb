@@ -1,4 +1,4 @@
-# config/initializers/refile.rb
+#config/initializers/refile.rb
 require "refile/s3"
 
 aws = {
