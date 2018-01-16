@@ -5,4 +5,5 @@ class Blog < ApplicationRecord
 	has_many :taggings, :dependent => :destroy, :autosave => true
     has_many :tags, through: :taggings
     has_many :photos
+    default_scope -> { order('created_at DESC') }
 end
