@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   match 'terms', to: 'static_pages#terms', via: 'get'
   match 'advertise', to: 'static_pages#advertise', via: 'get'
   match 'dashboard', to: 'static_pages#dashboard', via: 'get'
+  match 'thankyou', to: 'static_pages#thankyou', via: 'get'
 end

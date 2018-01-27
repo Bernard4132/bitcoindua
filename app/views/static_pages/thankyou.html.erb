@@ -1,0 +1,160 @@
+<style type="text/css">
+
+.thankyouhold{
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+.blogpart{
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  margin-top: 15px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+}
+
+.blogsection{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.servss{
+  color: #595959;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sidebarwebsite{
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-top: 7px solid #f48708;
+  position: relative;
+  top: -25px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+}
+
+.sidebarnewsletter{
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-top: 7px solid #f48708;
+  border-bottom: 7px solid #f48708;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+}
+
+.webcall{
+  font-weight: 700;
+  -webkit-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.21);
+-moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.21);
+box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.21);
+}
+
+.newscall{
+   font-weight: 700;
+  -webkit-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.21);
+-moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.21);
+box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.21);
+}
+
+.adonis{
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px;
+  background-color: #f48708;
+  border: #ff8900;
+}
+
+
+@media only screen and (min-width : 100px) and (max-width : 600px) {
+
+.sidebarwebsite{
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-top: 7px solid #f48708;
+  position: relative;
+  top: 0px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+}
+
+.sidebarnewsletter{
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-top: 7px solid #f48708;
+  border-bottom: 7px solid #f48708;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.21);
+}
+
+.thankyouhold{
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+}
+
+
+</style>
+
+
+
+<section class="py-5 thankyouhold" style="background-color: #ffffff;">
+      <div class="container">
+        <div class ="row">
+          <div class="col-sm-12">
+           
+            <h3 style="font-weight: 700; text-align: center; color: #f48708; text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.4);">It is always a great decision to look from the shoulders of the elders!</h3><br>
+            <p style="text-align: center;"><img src="https://res.cloudinary.com/nikasemo/image/upload/v1517058610/expert-advice_ncac5m.jpg" width="400px" height="250px" class="img-fluid"></p>
+            <p style="font-weight: 300; text-align: justify;">
+           Cryptofuor is an independent cryptocurrency, blockchain technology, decentralized applications, fin-tech startups publication dedicated to writing about the Internet of Money, it's news and analyze it's trends. With our expert counsel, you will be let in on good information which will make your crypto investments worth it. Investing in cryto as a newbie and knowing what to do is daunting. We are going to help you mauever the waters and make a worthwhile investment of your money and time.
+           </p>
+
+          </div>
+        </div>
+      </div>
+</section>
+
+<section style="background-color: #ffffff; padding: 30px;">
+  
+  <h5 style="font-weight: 700; text-align: center; color: #f48708;">A beginner in crypto and Bitcoin?? Here are some valuable posts that will help you understand the basics...</h5>
+
+  <div class="blogsection">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 col-md-12">
+      <div class="blogpart">
+       <%= render @tagblogs %>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-12">
+
+     <% if notice %>
+<div class="alert alert-success alert-dismissible" role="alert" style="margin-bottom: 10px;">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <p class="notice"><%= notice %></p>
+</div>
+<% end %>
+        
+    </div>
+    </div>
+  </div>
+</div>
+
+</section>

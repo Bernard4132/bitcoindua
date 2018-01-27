@@ -34,7 +34,7 @@ class CrytosubscriptionsController < ApplicationController
         RespondMailer.delay(run_at: 2.days.from_now).crypt_message2(@crytosubscription)
         RespondMailer.delay(run_at: 3.days.from_now).crypt_message3(@crytosubscription)
         RespondMailer.delay(run_at: 5.days.from_now).crypt_message4(@crytosubscription)
-        format.html { redirect_to "/", notice: 'Thanks for seeking for expert Advice. You will hear from us soon.' }
+        format.html { redirect_to "/thankyou" }
         format.json { render :show, status: :created, location: @crytosubscription }
       else
         format.html { render :new }

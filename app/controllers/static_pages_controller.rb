@@ -19,6 +19,12 @@ end
 def faq
 end
 
+def thankyou
+	@tag = Tag.find(2)
+    @tagblogs = @tag.blogs
+	render layout: "blog"
+end
+
 def dashboard
 	if signed_in?
 	@allusers = User.all
