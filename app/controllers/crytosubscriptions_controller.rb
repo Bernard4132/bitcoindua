@@ -31,9 +31,9 @@ class CrytosubscriptionsController < ApplicationController
     respond_to do |format|
       if @crytosubscription.save
         RespondMailer.delay(run_at: 1.day.from_now).crypt_message(@crytosubscription)
-        RespondMailer.delay(run_at: 2.days.from_now).crypt_message2(@crytosubscription)
-        RespondMailer.delay(run_at: 3.days.from_now).crypt_message3(@crytosubscription)
-        RespondMailer.delay(run_at: 5.days.from_now).crypt_message4(@crytosubscription)
+        RespondMailer.delay(run_at: 3.days.from_now).crypt_message2(@crytosubscription)
+        RespondMailer.delay(run_at: 9.days.from_now).crypt_message3(@crytosubscription)
+        RespondMailer.delay(run_at: 15.days.from_now).crypt_message4(@crytosubscription)
         format.html { redirect_to "/thankyou" }
         format.json { render :show, status: :created, location: @crytosubscription }
       else
