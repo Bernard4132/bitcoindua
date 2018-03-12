@@ -1,0 +1,22 @@
+<%= form_for(eblast) do |f| %>
+  <% if eblast.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(eblast.errors.count, "error") %> prohibited this eblast from being saved:</h2>
+
+      <ul>
+      <% eblast.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

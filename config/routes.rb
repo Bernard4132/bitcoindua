@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  resources :eblasts do
+    collection { post :import }
+  end
+  
   resources :newsletters
   resources :contacts
   resources :subscriptions do

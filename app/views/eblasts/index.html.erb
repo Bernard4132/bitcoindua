@@ -1,0 +1,36 @@
+<br>
+<br>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Eblasts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @eblasts.each do |eblast| %>
+      <tr>
+        <td><%= eblast.email %></td>
+        <td><%= link_to 'Show', eblast %></td>
+        <td><%= link_to 'Edit', edit_eblast_path(eblast) %></td>
+        <td><%= link_to 'Destroy', eblast, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<h2>Import Products</h2>
+<%= form_tag import_eblasts_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+
+<br>
+<br>
