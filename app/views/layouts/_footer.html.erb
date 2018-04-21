@@ -42,6 +42,14 @@
             <ul style="list-style:none; padding-left:0;">
             <li><a href="/contacts/new" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">Contact Us</a></li>
             <li><a href="/terms" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">Terms and Conditions</a></li>
+             <% if signed_in? %>
+            <li><%= link_to "Admin Sign Out", destroy_user_session_path, :method => :delete, :style => "color: white; font-weight: 300; font-size: 14px; text-decoration:none;" %></li>
+             <li><a href="/dashboard" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">Admin Dashboard</a>
+            </li>
+            <% else %>
+            <li><a href="/users/sign_in" style="color: white; font-weight: 300; font-size: 14px; text-decoration:none;">Admin Login</a>
+            </li>
+            <% end %>
             </ul>
           </div>
         </div>

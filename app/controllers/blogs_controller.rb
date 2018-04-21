@@ -28,7 +28,7 @@ class BlogsController < ApplicationController
   # POST /blogs.json
   def create
     @blog = Blog.new(blog_params)
-
+    @blog.user = current_user
     respond_to do |format|
       if @blog.save
         format.html { redirect_to '/dashboard', notice: 'Blog post was successfully created.' }
@@ -38,6 +38,7 @@ class BlogsController < ApplicationController
         format.json { render json: @blog.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :create, @blog
   end
 
   # PATCH/PUT /blogs/1

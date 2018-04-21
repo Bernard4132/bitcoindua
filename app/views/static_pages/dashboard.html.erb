@@ -1,4 +1,4 @@
-
+<%  if current_user.has_role? :admin %>
 <title>Cryptofuor | Admin Dashboard</title>
 <meta name="description" content="Crytofuor.com is Ghana's foremost blog when it comes to bitcoin and all its related issues.">
       <meta name="keywords" content="Bitcoin, Bitcoin Ghana, Crytocurrency ghana, altcoins, altcoin ghana, cryptocurrency, crypto currency, bitcoin money, bitcoin cash, monero">
@@ -100,3 +100,10 @@
 <br><br>
 
 </body>
+<% else %>
+<br><br><br><br>
+<h3 style="text-align: center; font-weight: 700; color: red;">Sorry, You are not an admin. Kindly seek admin priveledges first!</h3>
+<p style="text-align: center;"><i class="fa fa-lock fa-4x" aria-hidden="true"></i></p>
+<p style="text-align: center;"><a href="/">Return to Homepage</a></p>
+<br>
+<% end %>
