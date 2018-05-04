@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :courses
   resources :eblasts do
     collection { post :import }
   end
@@ -27,4 +28,5 @@ Rails.application.routes.draw do
   match 'advertise', to: 'static_pages#advertise', via: 'get'
   match 'dashboard', to: 'static_pages#dashboard', via: 'get'
   match 'thankyou', to: 'static_pages#thankyou', via: 'get'
+  match 'bitcoincrashcourse', to: 'static_pages#bitcoincrashcourse', via: 'get'
 end

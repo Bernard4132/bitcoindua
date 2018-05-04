@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bitcoindua | Ghana's No. 1 Bitcoin seller</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application' %>
+    <!-- Latest compiled and minified CSS -->
+    
+    <%= stylesheet_link_tag 'bootstrap.css', :media => 'all' %>
+     <%= stylesheet_link_tag 'full-slider.css', :media => 'all' %>
+    <script src="https://use.fontawesome.com/fc6d352727.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Asap+Condensed|Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+ 
+  <body>
+
+  <%= yield %>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <%= javascript_include_tag 'scroll-reveal.js' %>
+
+    <script type="text/javascript">
+$.fn.scrollReveal(); 
+    </script>
+
+    <script type="text/javascript">
+$(window).scroll(function () {
+        if ($(window).scrollTop() > 100) {
+            $(".navbackground").addClass('meffect');
+              $(".navbar-light").find("a.navbar-brand1").addClass("navbar-scroll");
+              $(".navbar-light").find(".navbar-nav").find("a.nav-link").addClass("navlinkscroll");
+            
+        } else {
+            $(".navbackground").removeClass('meffect');
+            $(".navbar-light").find("a.navbar-brand1").removeClass("navbar-scroll");
+        }
+    });
+
+    </script>
+   
+  </body>
+</html>

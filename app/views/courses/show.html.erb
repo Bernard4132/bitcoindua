@@ -1,0 +1,219 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=171492260258193&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<style type="text/css">
+	  a {
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+
+  .navbackground{
+     background-color: #ffffff;
+    -webkit-box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.29);
+-moz-box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.29);
+box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.29);
+  }
+
+
+
+.navbar-brand1 {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+
+
+
+.navbar-light .navbar-brand1{
+color: #5cc804; 
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+}
+
+.navbar-scroll{
+color: #000; 
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+  color: white;
+}
+
+.navbar-light .navbar-scroll:focus, .navbar-light .navbar-scroll:hover {
+  color: #343a40;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #00141a;
+  font-weight: 300;
+  font-family: 'Asap Condensed', sans-serif;
+  transition: border-color .5s ease-in-out;
+    -webkit-transition: border-color .5s ease-in-out;
+    -moz-transition: border-color .5s ease-in-out;
+  border-bottom: 4px solid transparent;
+}
+
+.navlinkscroll{
+  color: #343a40;
+  
+}
+
+.navbar-light .navbar-nav .nav-link:focus {
+  color: #00141a;
+  font-weight: 700;
+  border-bottom-color:#00141a;
+}
+
+ .navbar-light .navbar-nav .nav-link:hover {
+  color: #00141a;
+  font-weight: 700;
+  border-bottom-color: #00141a;
+}
+
+.navbar-light .navbar-nav .nav-link.disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
+  color: #ffffff;
+  font-weight: 500;
+  background-color: #00e600;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.martopp {
+	margin-top: 35px;
+}
+
+.secthanksbody {
+	padding: 30px;
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-bottom: 0px;
+}
+
+.thankyoutextholder {
+	padding: 30px;
+	margin-bottom: 5px;
+}
+
+li {
+  padding-left: 1.3em ;
+  list-style: none;
+  line-height: 18px;
+  margin-bottom: 15px;
+}
+
+li:before {
+  content: '\f00c';
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em;
+  width: 1.3em;
+}
+
+@media only screen and (min-width : 100px) and (max-width : 600px) {
+
+.secthanksbody {
+	padding: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.thankyoutextholder {
+	padding: 15px;
+	margin-bottom: 20px;
+}
+
+}
+
+</style>
+
+<body style="background-color: #d9d9db;">
+  <!-- Navigation -->
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top navbackground">
+      <div class="container">
+       <a class="navbar-brand1" href="/" style=""><img src="https://res.cloudinary.com/nikasemo/image/upload/v1511963470/cryptofuor_logo_geqsjt.png" style="margin-right:5px; margin-top: 0px;"></a>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<section class="secthanksbody">
+<div class="container">
+	<div class="row martopp">
+		<div class="col-lg-6">
+			<div class="thankyoutextholder">
+				<h5 style="text-align: center; color: red;">MUST READ</h5>
+				<h5 style="color: #f48708; font-weight: 300;">Thank you <span style="font-weight: 500;"><%= @course.name %></span> for enrolling in this email course!</h5>
+				<p class="text-muted">This course will be delivered through your email in seven short reads. To really find value from this, go hard on this. You have to know about bitcoin and befor investing in it. This crash course gives you exactly what you need! <br><span style="color: black;">First email coming through in the next 30 minutes..</span></p>
+				<br>
+				<h5 style="text-align: left;">Your'e going to learn...</h5>
+		       	<ul style="text-align: left;">
+		          <li style="font-weight: 300;">What bitcoin is and why you want to learn more about bitcoin</li>
+	          <li style="font-weight: 300;">Misconceptions about bitcoin and debunked misconceptions leading beginners astray</li>
+	          <li style="font-weight: 300;">What are Altcoins and why we hav a lot of them.</li>
+	          <li style="font-weight: 300;">Why we believe in bitcoin and some other altcoins</li>
+	          <li style="font-weight: 300;">How to research for bitcoin investment and how to buy your first bitcoin</li>
+	          <li style="font-weight: 300;">And a lot more...</li>
+		        </ul>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="row">
+				<div class="col-lg-12 mx-auto">
+					<div class="thankyoutextholder">
+						<h5 style="color: #f48708; font-weight: 300;">Kindly like our <span style="font-weight: 500;">Page</span> on <span style="font-weight: 500;">Facebook</span>!</h5>
+						<p>
+						 Learn more from us, see our motivational messages that keep us going and also be the first to see our offers and take opportunity of them.
+						</p>
+						<div class="fb-page" data-href="https://www.facebook.com/Cryptofuor-134517460560343/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<div class="ctaholdlast" style="margin-top: 0; margin-bottom: 70px;">
+				<p style="text-align: center; font-size: 25px; font-weight: 500;">It is always great to learn and improve yourself. See you in the course...</p>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+<section class="footer">
+  <div class="container">
+  <div class="row" style="margin-top: 20px;">
+    <div class="col-lg-12">
+      <h5 style="text-align: center; font-weight: 300;">Copyright 2018, Cryptofuor. www.cryptofuor.com</h5>
+      <p style="font-weight: 300; font-size: 18px; text-align: center;">Terms | Privacy Policy | Disclaimer</p>
+<br><br>
+    </div>
+  </div>
+</div>
+</section>
+</body>

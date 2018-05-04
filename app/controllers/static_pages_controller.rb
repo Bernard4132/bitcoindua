@@ -35,4 +35,9 @@ def dashboard
     end
 end
 
+def bitcoincrashcourse
+	@course = Course.new
+	render layout: "emptylayout"
+end
+
 end
