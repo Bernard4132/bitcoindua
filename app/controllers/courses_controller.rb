@@ -30,13 +30,13 @@ class CoursesController < ApplicationController
 
     respond_to do |format|
       if @course.save
-        CourseMailer.delay(run_at: 2.minutes.from_now).lesson_one(@course)
-        CourseMailer.delay(run_at: 3.minutes.from_now).lesson_two(@course)
-        CourseMailer.delay(run_at: 4.minutes.from_now).lesson_three(@course)
-        CourseMailer.delay(run_at: 5.minutes.from_now).lesson_four(@course)
-        CourseMailer.delay(run_at: 6.minutes.from_now).lesson_five(@course)
-        CourseMailer.delay(run_at: 7.minutes.from_now).lesson_six(@course)
-        CourseMailer.delay(run_at: 8.minutes.from_now).lesson_seven(@course)
+        CourseMailer.delay(run_at: 30.minutes.from_now).lesson_one(@course)
+        CourseMailer.delay(run_at: 1.day.from_now).lesson_two(@course)
+        CourseMailer.delay(run_at: 2.days.from_now).lesson_three(@course)
+        CourseMailer.delay(run_at: 3.days.from_now).lesson_four(@course)
+        CourseMailer.delay(run_at: 4.days.from_now).lesson_five(@course)
+        CourseMailer.delay(run_at: 5.days.from_now).lesson_six(@course)
+        CourseMailer.delay(run_at: 6.days.from_now).lesson_seven(@course)
         format.html { redirect_to @course }
         format.json { render :show, status: :created, location: @course }
       else
